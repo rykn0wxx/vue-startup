@@ -1,0 +1,18 @@
+/* eslint-disable */
+@tailwind base;
+
+@tailwind components;
+
+@tailwind utilities;
+
+@layer utilities {
+  .flex-basis {
+    flex-basis: 100%;
+  }
+  .flex-basis-auto {
+    flex-basis: auto;
+  }
+  .word-wrap {
+    word-wrap: break-word;
+  }
+}

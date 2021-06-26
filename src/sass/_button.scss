@@ -1,0 +1,52 @@
+.btn, .a-btn {
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  min-height: 36px;
+  min-width: 68px;
+  line-height: 36px;
+  vertical-align: middle;
+  align-items: center;
+  text-align: center;
+  border-radius: 2px;
+  user-select: none;
+  outline: none;
+  border: 0;
+  padding: 0 8px;
+  margin: 6px 8px;
+  background: transparent;
+  color: currentColor;
+  white-space: nowrap;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 14px;
+  font-style: inherit;
+  font-variant: inherit;
+  font-family: inherit;
+  text-decoration: none;
+  overflow: hidden;
+  transition-property: box-shadow, background-color, transform, color;
+  transition-duration: 400ms;
+  transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+  &.btn-icon {
+    margin: 0 6px;
+    height: 40px;
+    min-width: 0;
+    line-height: 24px;
+    padding: 8px;
+    width: 40px;
+    .btn-content {
+      display: block;
+      margin: auto;
+      background-repeat: no-repeat;
+      fill: currentColor;
+      height: 24px;
+      width: 24px;
+      min-height: 24px;
+      min-width: 24px;
+    }
+    &:hover {
+      background-color: rgba(158, 158, 158, 0.2);
+    }
+  }
+}

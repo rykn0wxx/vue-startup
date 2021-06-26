@@ -1,0 +1,87 @@
+html {
+  font-size: calc(100% - calc(100% - 10px));
+  line-height: 1.42857142857;
+  tab-size: 2;
+}
+body {
+  font-size: 1.4rem;
+  font-weight: 400;
+  background-color: #FAFBFC;
+  color: #222C3C;
+}
+[v\:cloak], [v-cloak], [data-v-cloak], [x-v-cloak], .v-cloak, .x-v-cloak {
+  display: none !important;
+}
+/***************
+ * TYPE DEFAULTS
+ ***************/
+a {
+  text-decoration: none;
+  font-weight: 400;
+  color: #0747A6;
+  &:hover {
+    color: #0052CC
+  }
+}
+h1 {
+  font-size: rem(3.400);
+  font-weight: 400;
+  line-height: rem(4.00);
+}
+h2 {
+  font-size: rem(2.400);
+  font-weight: 400;
+  line-height: rem(3.2);
+}
+h3 {
+  font-size: rem(2.000);
+  font-weight: 500;
+  letter-spacing: 0.005em;
+}
+h4 {
+  font-size: rem(1.600);
+  font-weight: 400;
+  letter-spacing: 0.010em;
+  line-height: rem(2.40);
+}
+p {
+  font-size: rem(1.60);
+  font-weight: 400;
+  letter-spacing: 0.010em;
+  line-height: 1.6em;
+  margin: 0.8em 0 1.6em;
+}
+strong {
+  font-weight: 500;
+}
+blockquote {
+  border-left: 3px solid rgba(0, 0, 0, 0.12);
+  font-style: italic;
+  margin-left: 0;
+  padding-left: 16px;
+}
+ul, li {
+  list-style: none;
+}
+::-webkit-scrollbar {
+  width: 8px !important;
+  height: 8px !important;
+  border-radius: 4px !important;
+  display: initial;
+  &-corner {
+    background-color: #2D3033;
+  }
+  &-track {
+    background-color: #e5e5e5;
+  }
+  &-thumb {
+    background-color: #7f7f7f;
+    border-radius: 4px !important;
+    cursor: pointer !important;
+  }
+}
+@include layout-for-name;
+@include flex-for-name;
+@include fflex-for-name;
+@include layout-for-container;
+@include flex-properties-for-name;

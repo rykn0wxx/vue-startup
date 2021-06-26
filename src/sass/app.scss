@@ -1,0 +1,27 @@
+@import './functions';
+@import './variables';
+@import './mixins';
+@import './structure';
+@import './typography';
+@import './core';
+@import './button';
+@import './sidebar';
+
+.home {
+  background-color: #3498db;
+}
+.dashboard {
+  background-color: #9b59b6;
+}
+.admin {
+  background-color: #e67e22;
+}
+.about {
+  background-color: #1abc9c;
+}
+.blog {
+  background-color: #2ecc71;
+}
+.contact {
+  background-color: #e74c3c;
+}

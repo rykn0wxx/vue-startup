@@ -1,0 +1,112 @@
+@mixin fflex-for-name($name: null) {
+  @if $name == null { $name: ''; }
+  @if $name != '' { $name: '-#{$name}'; }
+  .fflex#{$name}-col, .fflex#{$name}-row {
+    display: flex;
+  }
+  .fflex#{$name}-col { flex-direction: column; }
+  .fflex#{$name}-row { flex-direction: row; }
+
+  .fflex-col > .fflex { min-height: 0; }
+  .fflex-row > .fflex { min-width: 0; }
+}
+@mixin layout-for-name($name: null) {
+  @if $name == null { $name : ''; }
+  @if $name != '' { $name : '-#{$name}'; }
+
+  .layout#{$name}, .layout#{$name}-column, .layout#{$name}-row {
+    display: flex;
+  }
+  .layout#{$name}-column { flex-direction: column; }
+  .layout#{$name}-row { flex-direction: row; }
+  .layout#{$name}-column > .fflex { min-height: 0; }
+  .layout#{$name}-row > .fflex { min-width: 0; }
+}
+@mixin flex-for-name($name: null) {
+  $flexName: 'fflex';
+  @if $name != null {
+    $flexName: 'fflex-#{$name}';
+    $name : '-#{$name}';
+  } @else {
+    $name : '';
+  }
+  .#{$flexName} { flex: 1; }
+}
+@mixin flex-properties-for-name($name: null) {
+  $flexName: 'fflex';
+  @for $i from 0 through 1 {
+    $intVal: ($i * 8) + 24;
+    $val: #{$intVal + '%'};
+    .#{$flexName}-#{$intVal} {
+      flex: 1 1 100%;
+      max-width: #{$val};
+      max-height: 100%;
+    }
+    .layout-row > .#{$flexName}-#{$intVal} {
+      flex: 1 1 100%;
+      max-width: #{$val};
+      max-height: 100%;
+
+      @if $i == 0 {  min-width: 0;  }
+    }
+    .layout-column > .#{$flexName}-#{$intVal} {
+      flex: 1 1 100%;
+      max-width: 100%;
+      max-height: #{$val};
+    }
+  }
+}
+@mixin layout-for-container() {
+  .layout-container {
+    width: 100%;
+    padding-right: $grid-gutter-width;
+    padding-left: $grid-gutter-width;
+    display: flex;
+    justify-content: space-between;
+  }
+  @each $brkpt, $cont-width in $container-max-widths {
+    %responsive-container-#{$brkpt} {
+      max-width: $cont-width;
+    }
+    $extend-breakpoint: true;
+    @each $name, $width in $grid-breakpoints {
+      @if ($extend-breakpoint) {
+        .layout-container#{breakpoint-infix($name, $grid-breakpoints)} {
+          @extend %responsive-container-#{$brkpt};
+        }
+        @if ($brkpt == $name) {
+          $extend-breakpoint: false;
+        }
+      }
+    }
+  }
+}
+@mixin md-title() {
+  font-size: $title-font-size-base;
+  font-weight: 500;
+  letter-spacing: 0.005em;
+}
+@mixin md-body-1() {
+  font-size: $body-font-size-base;
+  font-weight: 400;
+  letter-spacing: 0.010em;
+  line-height: rem(2);
+}
+@mixin md-body-2() {
+  font-size: $body-font-size-base;
+  font-weight: 500;
+  letter-spacing: 0.010em;
+  line-height: rem(2.4);
+}
+@mixin md-body-3() {
+  font-size: $subhead-font-size-base;
+  font-weight: 600;
+  letter-spacing: 0.010em;
+  line-height: rem(2.0);
+}
+@mixin md-subhead() {
+  font-size: $subhead-font-size-base;
+  font-weight: 400;
+  letter-spacing: 0.010em;
+  line-height: rem(2.4);
+}

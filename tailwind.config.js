@@ -8,10 +8,10 @@ module.exports = {
   purge: {
     mode: 'all',
     content: ['./public/**/*.html', './src/**/*.vue'],
-    defaultExtractor: content => content.match(/[A-Za-z0-9-_:/]+/g) || []
+    defaultExtractor: (content) => content.match(/[A-Za-z0-9-_:/]+/g) || []
   },
   presets: [],
-  darkMode: false, // or 'media' or 'class'
+  darkMode: false,
   theme: {
     screens: {
       xs: '576px',
@@ -109,16 +109,16 @@ module.exports = {
       pulse: 'pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite',
       bounce: 'bounce 1s infinite'
     },
-    backdropBlur: theme => theme('blur'),
-    backdropBrightness: theme => theme('brightness'),
-    backdropContrast: theme => theme('contrast'),
-    backdropGrayscale: theme => theme('grayscale'),
-    backdropHueRotate: theme => theme('hueRotate'),
-    backdropInvert: theme => theme('invert'),
-    backdropOpacity: theme => theme('opacity'),
-    backdropSaturate: theme => theme('saturate'),
-    backdropSepia: theme => theme('sepia'),
-    backgroundColor: theme => theme('colors'),
+    backdropBlur: (theme) => theme('blur'),
+    backdropBrightness: (theme) => theme('brightness'),
+    backdropContrast: (theme) => theme('contrast'),
+    backdropGrayscale: (theme) => theme('grayscale'),
+    backdropHueRotate: (theme) => theme('hueRotate'),
+    backdropInvert: (theme) => theme('invert'),
+    backdropOpacity: (theme) => theme('opacity'),
+    backdropSaturate: (theme) => theme('saturate'),
+    backdropSepia: (theme) => theme('sepia'),
+    backgroundColor: (theme) => theme('colors'),
     backgroundImage: {
       none: 'none',
       'gradient-to-t': 'linear-gradient(to top, var(--tw-gradient-stops))',
@@ -130,7 +130,7 @@ module.exports = {
       'gradient-to-l': 'linear-gradient(to left, var(--tw-gradient-stops))',
       'gradient-to-tl': 'linear-gradient(to top left, var(--tw-gradient-stops))'
     },
-    backgroundOpacity: theme => theme('opacity'),
+    backgroundOpacity: (theme) => theme('opacity'),
     backgroundPosition: {
       bottom: 'bottom',
       center: 'center',
@@ -171,11 +171,11 @@ module.exports = {
       150: '1.5',
       200: '2'
     },
-    borderColor: theme => ({
+    borderColor: (theme) => ({
       ...theme('colors'),
       DEFAULT: theme('colors.gray.200', 'currentColor')
     }),
-    borderOpacity: theme => theme('opacity'),
+    borderOpacity: (theme) => theme('opacity'),
     borderRadius: {
       none: '0px',
       sm: '0.2rem',
@@ -197,7 +197,7 @@ module.exports = {
       DEFAULT: '0px 2px 4px -1px rgba(0, 0, 0, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12)',
       none: 'none'
     },
-    caretColor: theme => theme('colors'),
+    caretColor: (theme) => theme('colors'),
     contrast: {
       0: '0',
       50: '.5',
@@ -225,9 +225,9 @@ module.exports = {
       pointer: 'pointer',
       'not-allowed': 'not-allowed'
     },
-    divideColor: theme => theme('borderColor'),
-    divideOpacity: theme => theme('borderOpacity'),
-    divideWidth: theme => theme('borderWidth'),
+    divideColor: (theme) => theme('borderColor'),
+    divideOpacity: (theme) => theme('borderOpacity'),
+    divideWidth: (theme) => theme('borderWidth'),
     dropShadow: {
       sm: '0 1px 1px rgba(0,0,0,0.05)',
       DEFAULT: ['0 1px 2px rgba(0, 0, 0, 0.1)', '0 1px 1px rgba(0, 0, 0, 0.06)'],
@@ -296,8 +296,8 @@ module.exports = {
       extrabold: '800',
       black: '900'
     },
-    gap: theme => theme('spacing'),
-    gradientColorStops: theme => theme('colors'),
+    gap: (theme) => theme('spacing'),
+    gradientColorStops: (theme) => theme('colors'),
     gridAutoColumns: {
       auto: 'auto',
       min: 'min-content',
@@ -412,7 +412,7 @@ module.exports = {
       5: 'repeat(5, minmax(0, 1fr))',
       6: 'repeat(6, minmax(0, 1fr))'
     },
-    height: theme => ({
+    height: (theme) => ({
       auto: 'auto',
       ...theme('spacing'),
       full: '100%',
@@ -473,7 +473,7 @@ module.exports = {
       wider: '0.05em',
       widest: '0.1em'
     },
-    lineHeight: theme => ({
+    lineHeight: (theme) => ({
       default: '1.42857142857',
       none: '1',
       ...theme('spacing')
@@ -488,7 +488,7 @@ module.exports = {
       ...theme('spacing'),
       ...negative(theme('spacing'))
     }),
-    maxHeight: theme => ({
+    maxHeight: (theme) => ({
       auto: 'auto',
       0: '0',
       ...theme('spacing'),
@@ -502,14 +502,14 @@ module.exports = {
       ...theme('spacing'),
       ...breakpoints(theme('screens'))
     }),
-    minHeight: theme => ({
+    minHeight: (theme) => ({
       auto: 'auto',
       0: '0',
       ...theme('spacing'),
       full: '100%',
       screen: '100vh'
     }),
-    minWidth: theme => ({
+    minWidth: (theme) => ({
       auto: 'auto',
       0: '0',
       ...theme('spacing'),
@@ -565,14 +565,14 @@ module.exports = {
       white: ['2px dotted white', '2px'],
       black: ['2px dotted black', '2px']
     },
-    padding: theme => theme('spacing'),
-    placeholderColor: theme => theme('colors'),
-    placeholderOpacity: theme => theme('opacity'),
-    ringColor: theme => ({
+    padding: (theme) => theme('spacing'),
+    placeholderColor: (theme) => theme('colors'),
+    placeholderOpacity: (theme) => theme('opacity'),
+    ringColor: (theme) => ({
       DEFAULT: theme('colors.blue.500', '#3b82f6'),
       ...theme('colors')
     }),
-    ringOffsetColor: theme => theme('colors'),
+    ringOffsetColor: (theme) => theme('colors'),
     ringOffsetWidth: {
       0: '0px',
       1: '1px',
@@ -580,7 +580,7 @@ module.exports = {
       4: '4px',
       8: '8px'
     },
-    ringOpacity: theme => ({
+    ringOpacity: (theme) => ({
       DEFAULT: '0.5',
       ...theme('opacity')
     }),
@@ -659,8 +659,8 @@ module.exports = {
       1: '1',
       2: '2'
     },
-    textColor: theme => theme('colors'),
-    textOpacity: theme => theme('opacity'),
+    textColor: (theme) => theme('colors'),
+    textOpacity: (theme) => theme('opacity'),
     transformOrigin: {
       center: 'center',
       top: 'top',
@@ -727,7 +727,7 @@ module.exports = {
       '-3/4': '-75%',
       '-full': '-100%'
     }),
-    width: theme => ({
+    width: (theme) => ({
       auto: 'auto',
       ...theme('spacing'),
       '1/2': '50%',

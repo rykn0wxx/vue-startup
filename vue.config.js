@@ -15,6 +15,7 @@ module.exports = {
   },
   chainWebpack: conf => {
     const svgRule = conf.module.rule('svg')
+    const fileRule = conf.module.rule()
     conf.resolve.alias.delete('@')
     conf.resolve.alias.set('v~', path.resolve(__dirname, 'src'))
 

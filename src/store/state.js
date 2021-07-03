@@ -18,6 +18,7 @@ export default {
       ]
     },
     { id: 'j5osvkan-u0ip-19a7zi', name: 'Treeview', type: 'toggle', depth: 1, active: false, open: false, children: [{ id: 'uzrv16cc-r5po-j3j5kw', name: 'Blog', type: 'link', depth: 2, active: false, url: 'blog', parentId: 'j5osvkan-u0ip-19a7zi' }] },
-    { id: 'zyoogw3z-7xqr-sotdu2', name: 'Menu 01', type: 'toggle', depth: 1, active: false, open: false, children: [{ id: '4gxrijxi-v2hq-846xqw', name: 'Dashboard', type: 'link', depth: 2, active: false, url: 'dashboard', parentId: 'zyoogw3z-7xqr-sotdu2' }] }
+    { id: 'zyoogw3z-7xqr-sotdu2', name: 'Menu 01', type: 'toggle', depth: 1, active: false, open: false, children: [{ id: '4gxrijxi-v2hq-846xqw', name: 'Dashboard', type: 'link', depth: 2, active: false, url: 'dashboard', parentId: 'zyoogw3z-7xqr-sotdu2' }] },
+    { id: 'aaaaaaaa-bbbb-cccccc', name: 'Trello', type: 'link', depth: 1, active: false, url: 'trello' }
   ]
 }

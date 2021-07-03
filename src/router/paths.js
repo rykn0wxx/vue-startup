@@ -42,5 +42,11 @@ export default [
         meta: { isPublic: false }
       }
     ]
+  },
+  {
+    path: '/trello',
+    name: 'Trello',
+    view: 'pages/Trello',
+    meta: { isPublic: false }
   }
 ]

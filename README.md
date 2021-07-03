@@ -4,11 +4,6 @@ A simple starter project for [VueJS](https://github.com/vuejs/vue) with [Tailwin
 
 
 ## To get started:
-<<<<<<< HEAD
----
-=======
-
->>>>>>> e31def733e813d07333385a660b5080c62bc49cc
 
 1. Clone the repository:
 

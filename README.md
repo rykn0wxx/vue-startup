@@ -4,7 +4,11 @@ A simple starter project for [VueJS](https://github.com/vuejs/vue) with [Tailwin
 
 
 ## To get started:
+<<<<<<< HEAD
 ---
+=======
+
+>>>>>>> e31def733e813d07333385a660b5080c62bc49cc
 
 1. Clone the repository:
 
@@ -30,9 +34,11 @@ A simple starter project for [VueJS](https://github.com/vuejs/vue) with [Tailwin
 
 > Now you should be able to see the project running at localhost:8181.
 
+___
+
 
 ## Tailwind CSS and PostCSS error
----
+
 
 1. Remove the default tailwind, postcss and autoprefixer:
    ```bash
